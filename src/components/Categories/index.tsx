@@ -5,9 +5,10 @@ type CategoriesProps = {
   onChangeCategory: (idx: number) => void;
 };
 
-const categories = ['Все', 'XIAOMI', 'REDMI','POXO']
+const categories = ['Все', 'XIAOMI', 'REDMI', 'POXO']
 
 export const Categories: React.FC<CategoriesProps> = React.memo(({ value, onChangeCategory }) => {
+  console.log(value, onChangeCategory, "props")
   return (
     <div className={s.categories}>
       <p className={s.categories__text}>По какому бренду искать:</p>

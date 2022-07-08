@@ -36,7 +36,7 @@ export const Carousels = () => {
       alt="Third slide"
     />
     <Carousel.Caption>
-      <h3>Удобеная достака</h3>
+      <h3>Удобная доставка</h3>
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </Carousel.Caption>
   </Carousel.Item>

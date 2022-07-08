@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { CartItem, CartEmpty } from '../components';
+import { CartItem } from '../components';
 
 import { selectCart } from '../redux/cart/selectors';
 import { clearItems } from '../redux/cart/slice';
+import { CartErrore } from '../components/CartError';
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();
@@ -14,13 +15,13 @@ const Cart: React.FC = () => {
   const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
 
   const onClickClear = () => {
-    if (window.confirm('Очистить корзину?')) {
+    if (window.confirm('Точно Очистить корзину?')) {
       dispatch(clearItems());
     }
   };
 
   if (!totalPrice) {
-    return <CartEmpty />;
+    return <CartErrore />;
   }
 
   return (
@@ -55,6 +56,7 @@ const Cart: React.FC = () => {
             </svg>
             Корзина
           </h2>
+        
           <div onClick={onClickClear} className="cart__clear">
             <svg
               width="20"
@@ -91,11 +93,14 @@ const Cart: React.FC = () => {
             <span>Очистить корзину</span>
           </div>
         </div>
+        <div className="cart__body">
         <div className="content__items">
           {items.map((item: any) => (
             <CartItem key={item.id} {...item} />
           ))}
         </div>
+
+
         <div className="cart__bottom">
           <div className="cart__bottom-details">
             <span>
@@ -107,6 +112,7 @@ const Cart: React.FC = () => {
               Сумма товаров: <b>{totalPrice} ₽</b>{' '}
             </span>
           </div>
+
           <div className="cart__bottom-buttons">
             <Link to="/" className="button button--outline button--add go-back-btn">
               <svg
@@ -130,6 +136,9 @@ const Cart: React.FC = () => {
             </div>
           </div>
         </div>
+        </div>
+
+
       </div>
     </div>
   );

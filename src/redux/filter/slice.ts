@@ -15,6 +15,9 @@ const filterSlice = createSlice({
   name: 'filters',
   initialState,
   reducers: {
+    // setColorId(state, action:PayloadAction<number>) { 
+    //   state.colorId = action.payload;
+    // },
     setCategoryId(state, action: PayloadAction<number>) {
       state.categoryId = action.payload;
     },
@@ -44,7 +47,7 @@ const filterSlice = createSlice({
   },
 });
 
-export const { setCategoryId, setSort, setCurrentPage, setFilters, setSearchValue } =
+export const { setCategoryId, setSort, setCurrentPage, setFilters, setSearchValue, } =
   filterSlice.actions;
 
 export default filterSlice.reducer;

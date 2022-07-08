@@ -4,9 +4,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectCartItemById } from '../../redux/cart/selectors';
 import { CartItem } from '../../redux/cart/types';
 import { addItem } from '../../redux/cart/slice';
-import { CardProperty } from '../CardColorSize';
 
-const typeNames = ['128 гб', '256 гб'];
+export const typeNames = ['128 гб', '256 гб'];
 
 type PhoneBlockProps = {
   id: string;
@@ -30,9 +29,9 @@ export const PhoneBlock: React.FC<PhoneBlockProps> = ({
   const cartItem = useSelector(selectCartItemById(id));
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
-
   const addedCount = cartItem ? cartItem.count : 0;
 
+  
   const onClickAdd = () => {
     const item: CartItem = {
       id,
@@ -45,7 +44,7 @@ export const PhoneBlock: React.FC<PhoneBlockProps> = ({
     };
     dispatch(addItem(item));
   };
-
+  console.log(sizes,"sizes")
   return (
     <div className="phone-block-wrapper">
       <div className="phone-block">
@@ -53,15 +52,29 @@ export const PhoneBlock: React.FC<PhoneBlockProps> = ({
           <img className="phone-block__image" src={imageUrl} alt="phone" />
           <h4 className="phone-block__title">{title}</h4>
         </Link>
-
-        <CardProperty
-          types={types}
-          setActiveType={setActiveType}
-          typeNames={typeNames}
-          sizes={sizes}
-          setActiveSize={setActiveSize}
-          activeSize={activeSize}
-          activeType={activeType} />
+        <div className="phone-block__selector">
+          <ul>
+            {types.map((typeId: number) => (
+              <li
+                key={typeId}
+                onClick={() => setActiveType(typeId)}
+                className={activeType === typeId ? 'active' : ''}>
+                {typeNames[typeId]}
+              </li>
+            ))}
+          </ul>
+          <ul>
+            {sizes.map((size: string | number, i: number) => (
+              <li
+                key={size}
+                onClick={() => setActiveSize(i)}
+                className={activeSize === i ? 'active' : ''}>
+                {size}
+                <ul className={size === "чёрный" ? "phone-block__black" : "" || size === "белый" ? 'phone-block__while' : "phone-block__coral"}></ul>
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="phone-block__bottom">
           <div className="phone-block__price">от {price} ₽</div>

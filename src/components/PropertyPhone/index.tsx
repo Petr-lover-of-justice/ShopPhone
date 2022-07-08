@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-// import { useParams, useNavigate } from 'react-router-dom';
-// import { CardProduct } from '..//../components/CardProduct';
-// import { PropertyPhone } from '..//../components/PropertyPhone';
+
 
 export const PropertyPhone:React.FC = () => {
     const [phone, setPhone] = React.useState<{

@@ -13,8 +13,8 @@ import { ErrorMessage } from '../components/ErrorMessage';
 const Home: React.FC = () => {
   const { items, status } = useSelector(selectPhoneData);
   const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
-
   const dispatch = useAppDispatch();
+
   const onChangeCategory = React.useCallback((idx: number) => {
     dispatch(setCategoryId(idx));
   }, []);
@@ -38,8 +38,6 @@ const Home: React.FC = () => {
         currentPage: String(currentPage),
       }),
     );
-
-    window.scrollTo(0, 0);
   };
 
   React.useEffect(() => {

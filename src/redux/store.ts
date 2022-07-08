@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import filter from './filter/slice';
 import cart from './cart/slice';
 import phone from './phone/slice';
+import fullPhone from './fullPhone/slice';
 import { useDispatch } from 'react-redux';
 
 export const store = configureStore({
@@ -9,6 +10,7 @@ export const store = configureStore({
     filter,
     cart,
     phone,
+    fullPhone,
   },
 });
 

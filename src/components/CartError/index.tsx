@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import s from './CartErrorModule.scss'
+import cartEmptyImg from '..//../assets/img/add-cart.png';
 
-import cartEmptyImg from '../assets/img/empty-cart.png';
-
-export const CartEmpty: React.FC = () => (
-  <div className="cart cart--empty">
+export const CartErrore: React.FC = () => (
+  <div className={s.cartError}>
     <h2>
       Корзина пустая 
     </h2>

@@ -8,7 +8,6 @@ export const fetchPhone = createAsyncThunk<Phone[], SearchPhoneParams>(
   'phone/fetchPhoneStatus',
   async (params) => {
     const { sortBy, order, category, search, currentPage } = params;
-    console.log(params, 4444);
     const { data } = await axios.get<Phone[]>(`https://618e3ea350e24d0017ce1178.mockapi.io/Items`, {
       params: pickBy(
         {
@@ -22,7 +21,7 @@ export const fetchPhone = createAsyncThunk<Phone[], SearchPhoneParams>(
         identity,
       ),
     });
-
+   
     return data;
   },
 );
