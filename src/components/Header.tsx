@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { Search } from './';
 import { selectCart } from '../redux/cart/selectors';
 
+
 export const Header: React.FC = () => {
   const { items, totalPrice } = useSelector(selectCart);
   const location = useLocation();
@@ -32,7 +33,11 @@ export const Header: React.FC = () => {
           </div>
         </Link>
         <Search />
-        {/* {location.pathname !== '/cart' && <Search />} */}
+
+ 
+
+    
+
         <div className="header__cart">
           {location.pathname !== '/cart' && (
             <Link to="/cart" className="button button--cart">
@@ -71,6 +76,7 @@ export const Header: React.FC = () => {
           )}
         </div>
       </div>
+      
     </div>
   );
 };

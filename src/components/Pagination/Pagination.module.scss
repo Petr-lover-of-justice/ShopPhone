@@ -1,4 +1,8 @@
 .root {
+  text-align: center;
+  display:flex;
+  justify-content:center;
+  white-space: nowrap;
   li {
     display: inline-block;
 

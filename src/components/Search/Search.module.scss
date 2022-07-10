@@ -1,7 +1,6 @@
 .root {
   position: relative;
   left: 0px;
-
 }
 
 .input {
@@ -43,24 +42,26 @@
 }
 
 
-@media screen and (max-width: 900px){
-  .input{
-    width:200px;
+@media (max-width: 900px){
+  .input{   
+    width:250px;
+    margin-top: 20px;
     margin-left: 20px;
   }
   .icon {
+    margin-top: 20px;
     left: 25px;
   }
 }
-@media screen and (max-width: 500px){
-  .input{
-    margin-top: 10px;
-    margin-left: 28px;
-    width:200px;
-  }
-  .icon {
-    margin-top: 10px;
-    left: 40px;
-  }
+// @media  (max-width: 500px){
+//   .input{
+//     margin-top: 10px;
+//     margin-left: 28px;
+//     width:200px;
+//   }
+//   .icon {
+//     margin-top: 10px;
+//     left: 40px;
+//   }
 
-}
+// }

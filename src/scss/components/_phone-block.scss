@@ -12,11 +12,15 @@
 
   &-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
+    @media(max-width:800px) {
+      display: grid;
+      justify-content:center;
+    }
   }
 
   &__image {
-    width: 260px;
+    width: 300px;
   }
 
   &__title {
