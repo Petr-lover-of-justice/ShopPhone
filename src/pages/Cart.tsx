@@ -27,6 +27,7 @@ const Cart: React.FC = () => {
   return (
     <div className="container container--cart">
       <div className="cart">
+
         <div className="cart__top">
           <h2 className="content__title">
             <svg
@@ -56,7 +57,7 @@ const Cart: React.FC = () => {
             </svg>
             Корзина
           </h2>
-        
+
           <div onClick={onClickClear} className="cart__clear">
             <svg
               width="20"
@@ -93,26 +94,28 @@ const Cart: React.FC = () => {
             <span>Очистить корзину</span>
           </div>
         </div>
+
+
         <div className="cart__body">
-        <div className="content__items">
-          {items.map((item: any) => (
-            <CartItem key={item.id} {...item} />
-          ))}
-        </div>
-
-
-        <div className="cart__bottom">
-          <div className="cart__bottom-details">
-            <span>
-              {' '}
-              Всего товаров: <b>{totalCount} шт.</b>{' '}
-            </span>
-            <span>
-              {' '}
-              Сумма товаров: <b>{totalPrice} ₽</b>{' '}
-            </span>
+          <div className="content__items">
+            {items.map((item: any) => (
+              <CartItem key={item.id} {...item} />
+            ))}
           </div>
 
+
+          <div className="cart__bottom">
+            <div className="cart__bottom-details">
+              <p> В корзине <b>{totalCount} товаров.</b> </p>
+            <p> На сумму: <b>{totalPrice}₽</b>{' '}</p>
+            <div className="button pay-btn">
+              <span>Перейти к оформлению</span>
+            </div>
+            </div>
+            
+          </div>
+
+          {/* 
           <div className="cart__bottom-buttons">
             <Link to="/" className="button button--outline button--add go-back-btn">
               <svg
@@ -131,11 +134,10 @@ const Cart: React.FC = () => {
 
               <span>Вернуться назад</span>
             </Link>
-            <div className="button pay-btn">
-              <span>Оплатить сейчас</span>
-            </div>
-          </div>
-        </div>
+          </div> */}
+
+
+
         </div>
 
 

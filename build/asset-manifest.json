@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ShopPhone/static/css/main.22d15d41.css",
+    "main.js": "/ShopPhone/static/js/main.73a3c81c.js",
+    "Cart.js": "/ShopPhone/static/js/Cart.59165f24.chunk.js",
+    "FullPhone.css": "/ShopPhone/static/css/FullPhone.0fe5d4f3.chunk.css",
+    "FullPhone.js": "/ShopPhone/static/js/FullPhone.934472e0.chunk.js",
+    "NotFound.js": "/ShopPhone/static/js/NotFound.ba3b7c89.chunk.js",
+    "index.html": "/ShopPhone/index.html",
+    "main.22d15d41.css.map": "/ShopPhone/static/css/main.22d15d41.css.map",
+    "main.73a3c81c.js.map": "/ShopPhone/static/js/main.73a3c81c.js.map",
+    "Cart.59165f24.chunk.js.map": "/ShopPhone/static/js/Cart.59165f24.chunk.js.map",
+    "FullPhone.0fe5d4f3.chunk.css.map": "/ShopPhone/static/css/FullPhone.0fe5d4f3.chunk.css.map",
+    "FullPhone.934472e0.chunk.js.map": "/ShopPhone/static/js/FullPhone.934472e0.chunk.js.map",
+    "NotFound.ba3b7c89.chunk.js.map": "/ShopPhone/static/js/NotFound.ba3b7c89.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22d15d41.css",
+    "static/js/main.73a3c81c.js"
+  ]
+}
