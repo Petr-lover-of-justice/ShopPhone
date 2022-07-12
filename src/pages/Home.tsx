@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+
+
 import { useAppDispatch } from '../redux/store';
 import { selectFilter } from '../redux/filter/selectors';
 import { selectPhoneData } from '../redux/phone/selectors';
 import { setCategoryId, setCurrentPage } from '../redux/filter/slice';
 import { fetchPhone } from '../redux/phone/asyncActions';
-
 import { Categories, Sort, PhoneBlock, Skeleton, Pagination, } from '../components';
 import { Carousels } from '../components/Carousel';
 import { ErrorMessage } from '../components/ErrorMessage';
@@ -67,7 +68,6 @@ const Home: React.FC = () => {
           <div className="content__items">{status === 'loading' ? skeletons : phone}</div>
         )}
       </div>
-
       <Pagination currentPage={currentPage} onChangePage={onChangePage} />
     </div>
   );

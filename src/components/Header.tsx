@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
           <div className="header__logo">
             <img width="50" src={"https://i01.appmifile.com/webfile/globalimg/events/2018/newtemp/orange-logo.png"} alt="logo" />
             <div>
-              <h1>Ксяоми</h1>
+              <h1>Xiaomi</h1>
               <p>Самые лучшие цены</p>
             </div>
           </div>

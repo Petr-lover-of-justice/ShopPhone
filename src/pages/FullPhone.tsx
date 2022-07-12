@@ -1,10 +1,11 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { selectFullPhone } from '../redux/fullPhone/selectors';
 import { fetchFullPhone } from '../redux/fullPhone/asyncActionsFull';
 import { FullProperty } from '../components/FullProperty';
-import { addItem } from '../redux/cart/slice';
+
 
 
 const FullPhone: React.FC = () => {
