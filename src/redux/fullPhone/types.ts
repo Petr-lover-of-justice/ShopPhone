@@ -6,6 +6,14 @@ export type Phone = {
   sizes: number[];
   types: number[];
   rating: number;
+  
+  display: string;
+  processor:string;
+  ram: number;
+  battery: number;
+  cameras: string;
+  frontalCamera:string;
+  nfc: string;
 };
 
 export enum Status {

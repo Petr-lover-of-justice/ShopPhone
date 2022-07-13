@@ -18,6 +18,7 @@ const FullPhone: React.FC = () => {
     getPhone()
   }, [])
   const { items } = useSelector(selectFullPhone)
+  console.log(items,"fffffffff")
   const phone = items.map((item) => (
     <div key={item.id}><FullProperty key={item.id} {...item} /></div>
   ))

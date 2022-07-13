@@ -6,18 +6,8 @@ import { Link } from 'react-router-dom';
 import s from './FullProperty.module.scss'
 import { typeNames } from '../phoneBlock';
 import { addItem } from '../../redux/cart/slice';
-;
+
 const colorType = ['чёрный', 'белый', 'коралловый']
-//the server is under development
-const property = [
-  { parameter: "Экран", parameterValue: "6.67/1080x2400 Пикс" },
-  { parameter: "Процессор", parameterValue: "Qualcomm Snapdragon 870 3.2 ГГц" },
-  { parameter: "Оперативная память ", parameterValue: "8 ГБ" },
-  { parameter: "Встроенная память (ROM)", parameterValue: "Встроенная память (ROM)" },
-  { parameter: "Основная камера МПикс", parameterValue: "48/8/5" },
-  { parameter: "Фронтальная камера МПикс", parameterValue: "20" },
-  { parameter: "Технология NFC", parameterValue: "Да" },
-]
 const ColorKinds = ["colorBlack", "colorWhile", "colorCoral"]
 
 
@@ -28,6 +18,13 @@ type fullPhoneProps = {
   imageUrl: string;
   sizes: number[];
   types: number[];
+  display: string;
+  processor:string;
+  ram: number;
+  battery: number;
+  cameras: string;
+  frontalCamera:string;
+  nfc:string;
 }
 type CartItem = {
   id: string;
@@ -38,7 +35,8 @@ type CartItem = {
   size: number;
   count: number;
 };
-export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, imageUrl, sizes, types }) => {
+export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, imageUrl, sizes, display ,processor,ram,battery,cameras,frontalCamera,nfc}) => {
+
   const dispatch = useDispatch();
   const [color, setColor] = React.useState(0)
   const [choiceMemory, setChoiceMemory] = React.useState(1)
@@ -56,7 +54,6 @@ export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, image
     };
     dispatch(addItem(item));
   }
-
   return (
     <div >
       <div className={s.product}>
@@ -68,12 +65,36 @@ export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, image
           <p>Цвет: {colorType[color]}</p>
           <div className="color">
             {ColorKinds.map((items, i) => <li key={i} onClick={() => clickColor(i)} className={`${items} ${color === i ? `active` : `""`}`}></li>)}
-          </div>
-          <div className={s.productProperty}>
-            {property.map((arr: any, i: number) => <li key={i} className={s.productPropertyList}>
-              <ul className={s.productPropertyParameter}>{arr.parameter}</ul>
-              <ul className={s.productPropertyValue}>{arr.parameterValue}</ul>
-            </li>)}
+          </div>  
+          <div className={s.productProperty} >
+            <li className={s.productPropertyList}>
+              <ul>экран</ul>
+              <ul>{display}</ul>
+            </li>
+            <li className={s.productPropertyList}>
+              <ul>Процессор</ul>
+              <ul>{processor}</ul>
+            </li>
+            <li className={s.productPropertyList}>
+              <ul>Оперативная память</ul>
+              <ul>{ram}ГБ.</ul>
+            </li>
+            <li className={s.productPropertyList}>
+              <ul>Аккумулятор</ul>
+              <ul>{battery}мАч</ul>
+            </li>
+            <li className={s.productPropertyList}>
+              <ul>Основная камера МПикс</ul>
+              <ul>{cameras}</ul>
+            </li>
+            <li className={s.productPropertyList}>
+              <ul>Фронтальная камера МПикс</ul>
+              <ul>{frontalCamera}</ul>
+            </li>
+            <li className={s.productPropertyList}>
+              <ul>Технология NFC</ul>
+              <ul>{nfc}</ul>
+            </li>
           </div>
         </div>
       </div>
@@ -85,7 +106,7 @@ export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, image
         </Link>
         <Link to="/cart">
           <button className="button button--outline button--add" onClick={ClickPay}>
-            <span>купить</span>
+            <span>Добавить в корзину</span>
           </button>
         </Link>
       </div>

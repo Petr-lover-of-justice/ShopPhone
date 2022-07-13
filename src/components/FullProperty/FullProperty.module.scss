@@ -1,3 +1,4 @@
+
 div {
   margin-bottom: 0px;
 }
@@ -8,6 +9,13 @@ p {
 }
 .product {
   display: flex;
+
+  &__Excerpt{
+    display:block;
+    // justify-content:space-between;
+    background-color:pink;
+  }
+
   &Memeres {
     display: flex;
     cursor: pointer;
@@ -19,6 +27,7 @@ p {
   }
   &Specifications {
     width: 900px;
+    height:100%;
     padding-top: 30px;
     padding-left: 30px;
     li {
@@ -28,6 +37,7 @@ p {
   }
   &Property {
     margin: 0px;
+    
   }
   &Property div {
     display: flex;
@@ -65,9 +75,8 @@ p {
     }
   }
 }
-.productPropertyValue {
-  width: 300px;
-}
+
+
 
 .navigateBtn {
   display: flex;
@@ -82,7 +91,7 @@ p {
   cursor: pointer;
   border: 1px solid transparent;
   &:hover {
-    background-color: #f60;
+    background-color: #c03;
   }
 }
 .color {
@@ -113,7 +122,7 @@ p {
     background-color: Coral;
   }
   .active {
-    border: 5px solid pink;
+    border: 5px solid #c03(255, 0, 43);
     // border: 2px solid black;
   }
 }
