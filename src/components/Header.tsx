@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
   return (
     <div className="header">
       <div className="container">
-        <Link to="/">
+        <Link to="/ShopPhone/">
           <div className="header__logo">
             <img width="50" src={"https://i01.appmifile.com/webfile/globalimg/events/2018/newtemp/orange-logo.png"} alt="logo" />
             <div>
@@ -33,11 +33,6 @@ export const Header: React.FC = () => {
           </div>
         </Link>
         <Search />
-
- 
-
-    
-
         <div className="header__cart">
           {location.pathname !== '/cart' && (
             <Link to="/cart" className="button button--cart">

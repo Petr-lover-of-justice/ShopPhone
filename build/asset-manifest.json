@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/ShopPhone/static/css/main.22d15d41.css",
-    "main.js": "/ShopPhone/static/js/main.73a3c81c.js",
-    "Cart.js": "/ShopPhone/static/js/Cart.59165f24.chunk.js",
-    "FullPhone.css": "/ShopPhone/static/css/FullPhone.0fe5d4f3.chunk.css",
-    "FullPhone.js": "/ShopPhone/static/js/FullPhone.934472e0.chunk.js",
+    "main.css": "/ShopPhone/static/css/main.a44851bc.css",
+    "main.js": "/ShopPhone/static/js/main.89d4c6f2.js",
+    "Cart.js": "/ShopPhone/static/js/Cart.f5622e93.chunk.js",
+    "FullPhone.css": "/ShopPhone/static/css/FullPhone.81a4077e.chunk.css",
+    "FullPhone.js": "/ShopPhone/static/js/FullPhone.1db60456.chunk.js",
     "NotFound.js": "/ShopPhone/static/js/NotFound.ba3b7c89.chunk.js",
+    "static/media/instagram.png": "/ShopPhone/static/media/instagram.e719d8b29f452a16302d.png",
+    "static/media/telegram.png": "/ShopPhone/static/media/telegram.e9722f26cc228e817986.png",
+    "static/media/twitter (1).png": "/ShopPhone/static/media/twitter (1).894988327f8d68209e91.png",
+    "static/media/share1.png": "/ShopPhone/static/media/share1.4ce1179c5a22bc38b677.png",
     "index.html": "/ShopPhone/index.html",
-    "main.22d15d41.css.map": "/ShopPhone/static/css/main.22d15d41.css.map",
-    "main.73a3c81c.js.map": "/ShopPhone/static/js/main.73a3c81c.js.map",
-    "Cart.59165f24.chunk.js.map": "/ShopPhone/static/js/Cart.59165f24.chunk.js.map",
-    "FullPhone.0fe5d4f3.chunk.css.map": "/ShopPhone/static/css/FullPhone.0fe5d4f3.chunk.css.map",
-    "FullPhone.934472e0.chunk.js.map": "/ShopPhone/static/js/FullPhone.934472e0.chunk.js.map",
+    "main.a44851bc.css.map": "/ShopPhone/static/css/main.a44851bc.css.map",
+    "main.89d4c6f2.js.map": "/ShopPhone/static/js/main.89d4c6f2.js.map",
+    "Cart.f5622e93.chunk.js.map": "/ShopPhone/static/js/Cart.f5622e93.chunk.js.map",
+    "FullPhone.81a4077e.chunk.css.map": "/ShopPhone/static/css/FullPhone.81a4077e.chunk.css.map",
+    "FullPhone.1db60456.chunk.js.map": "/ShopPhone/static/js/FullPhone.1db60456.chunk.js.map",
     "NotFound.ba3b7c89.chunk.js.map": "/ShopPhone/static/js/NotFound.ba3b7c89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22d15d41.css",
-    "static/js/main.73a3c81c.js"
+    "static/css/main.a44851bc.css",
+    "static/js/main.89d4c6f2.js"
   ]
 }

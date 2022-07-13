@@ -11,7 +11,7 @@ import arrow from '..//../assets/img/share1.png';
 const aboutWe = ["О НАС", "Xiaomi", "Команда лидеров", "Политика Конфиденциальности", "Добросовестность и соблюдение требований"];
 const products = ["ПРОДУКЦИЯ", "Xiaomi 12X", "Xiaomi 11T", "Redmi Note 11", "Код купона"];
 const support = ["СВЯЗАТЬСЯ С НАМИ", "Онлайн поддержка", "Эл. почта", "Горячая линия : 88007756615", "Часы работы с 9:00 до 20:00 МСК, Пн. – Пт"];
-const link = ["/", "/", "/", "/", "/"];
+const link = ["/ShopPhone/", "/ShopPhone/", "/ShopPhone/", "/ShopPhone/", "/ShopPhone/"];
 
 export const Footer = () => {
     let linlus = link.map((item, i) => (item))
@@ -33,10 +33,10 @@ export const Footer = () => {
             <div className={s.network}>
                 <span className={s.networkNew}>Новости Xiaomi</span>
                 <li className={s.network__link}>
-                    <ul><Link to=""><img src={facebook} alt="facebook" /></Link></ul>
-                    <ul><Link to=""><img src={instagram} alt="instagram" /></Link></ul>
-                    <ul><Link to=""><img src={telegram} alt="telegram" /></Link></ul>
-                    <ul><Link to=""><img src={twitter} alt="twitter" /></Link></ul>
+                    <ul><Link to="/ShopPhone/"><img src={facebook} alt="facebook" /></Link></ul>
+                    <ul><Link to="/ShopPhone/"><img src={instagram} alt="instagram" /></Link></ul>
+                    <ul><Link to="/ShopPhone/"><img src={telegram} alt="telegram" /></Link></ul>
+                    <ul><Link to="/ShopPhone/"><img src={twitter} alt="twitter" /></Link></ul>
                 </li>
                 <div className={s.network__sending}>
                     <div><span>Будьте в курсе обновлений.</span></div>
@@ -45,7 +45,7 @@ export const Footer = () => {
                         placeholder="Введите адрес e-mail"
                         className={s.network__sending__input}
                     />
-                    <Link to=""><img src={arrow} alt="" /></Link>
+                    <Link to="/ShopPhone/"><img src={arrow} alt="" /></Link>
                 </div>
             </div>
         </div>

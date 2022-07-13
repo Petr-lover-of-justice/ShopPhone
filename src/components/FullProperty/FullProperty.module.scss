@@ -12,7 +12,6 @@ p {
 
   &__Excerpt{
     display:block;
-    // justify-content:space-between;
     background-color:pink;
   }
 
@@ -62,17 +61,19 @@ p {
   &PropertyList {
     display: flex;
     justify-content: space-between;
-    width: 600px;
+    max-width: 600px;
     margin-bottom: 0px;
     &ul {
       margin-bottom: 0px;
-      background-color: pink;
     }
   }
   &PropertyParameter:after {
     ul {
       display: grid-row;
     }
+  }
+  @media (max-width: 1000px) {
+    display: block;
   }
 }
 
