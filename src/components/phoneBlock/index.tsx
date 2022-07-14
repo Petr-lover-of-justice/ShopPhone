@@ -44,7 +44,7 @@ export const PhoneBlock: React.FC<PhoneBlockProps> = ({
     };
     dispatch(addItem(item));
   };
-  console.log(sizes,"sizes")
+
   return (
     <div className="phone-block-wrapper">
       <div className="phone-block">

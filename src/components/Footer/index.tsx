@@ -1,7 +1,9 @@
 import React from 'react'
+import axios from 'axios'
+import { SubmitHandler, useForm, } from 'react-hook-form'
 
 import s from "./Footer.module.scss"
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import facebook from '..//../assets/img/facebook.png';
 import instagram from '..//../assets/img/instagram.png';
 import telegram from '..//../assets/img/telegram.png';
@@ -12,12 +14,34 @@ const aboutWe = ["О НАС", "Xiaomi", "Команда лидеров", "Пол
 const products = ["ПРОДУКЦИЯ", "Xiaomi 12X", "Xiaomi 11T", "Redmi Note 11", "Код купона"];
 const support = ["СВЯЗАТЬСЯ С НАМИ", "Онлайн поддержка", "Эл. почта", "Горячая линия : 88007756615", "Часы работы с 9:00 до 20:00 МСК, Пн. – Пт"];
 const link = ["/ShopPhone/", "/ShopPhone/", "/ShopPhone/", "/ShopPhone/", "/ShopPhone/"];
-
+interface IShippingFields {
+    email: string
+    name: string
+}
 export const Footer = () => {
+
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<IShippingFields>()
+    const onSubmit: SubmitHandler<IShippingFields> = data => {
+      
+        (async () => {
+            try {
+                await axios({
+                    method: 'post',
+                    url: 'https://618e3ea350e24d0017ce1178.mockapi.io/mail',
+                    data
+                })
+            } catch (error) {
+                console.log("error", error)
+            }
+        })()
+        reset()
+        alert("ваша почта пришла нам на сервер)")
+    }
+
     let linlus = link.map((item, i) => (item))
-    let aboutUs = aboutWe.map((item, i) => (<ul><Link className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
-    let productsUs = products.map((item, i) => (<ul><Link className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
-    let supportUs = support.map((item, i) => (<ul><Link className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
+    let aboutUs = aboutWe.map((item, i) => (<ul key={item}><Link className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
+    let productsUs = products.map((item, i) => (<ul><Link key={item} className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
+    let supportUs = support.map((item, i) => (<ul><Link key={item} className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
     return (
         <div className={s.root}>
             <li>
@@ -40,12 +64,24 @@ export const Footer = () => {
                 </li>
                 <div className={s.network__sending}>
                     <div><span>Будьте в курсе обновлений.</span></div>
-                    <input
-                        type="text"
-                        placeholder="Введите адрес e-mail"
-                        className={s.network__sending__input}
-                    />
-                    <Link to="/ShopPhone/"><img src={arrow} alt="" /></Link>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        <input
+                            placeholder="Введите адрес e-mail"
+                            className={s.network__sending__input}
+                            {...register('email', {
+                                required: 'Email is require field!',
+                                pattern: {
+                                    value:
+                                        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                                    message: 'Please enter valid email!',
+                                },
+                            })}
+                        />
+                        {errors?.email && (
+                            <div style={{ color: 'red' }}>{errors.email.message}</div>
+                        )}
+                        <input type="image" alt="red" src={arrow} className={s.network__sending__click}></input>
+                    </form>
                 </div>
             </div>
         </div>

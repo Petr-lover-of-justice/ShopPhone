@@ -10,7 +10,6 @@ import { addItem } from '../../redux/cart/slice';
 const colorType = ['чёрный', 'белый', 'коралловый']
 const ColorKinds = ["colorBlack", "colorWhile", "colorCoral"]
 
-
 type fullPhoneProps = {
   id: string
   title: string;
@@ -19,12 +18,12 @@ type fullPhoneProps = {
   sizes: number[];
   types: number[];
   display: string;
-  processor:string;
+  processor: string;
   ram: number;
   battery: number;
   cameras: string;
-  frontalCamera:string;
-  nfc:string;
+  frontalCamera: string;
+  nfc: string;
 }
 type CartItem = {
   id: string;
@@ -35,8 +34,7 @@ type CartItem = {
   size: number;
   count: number;
 };
-export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, imageUrl, sizes, display ,processor,ram,battery,cameras,frontalCamera,nfc}) => {
-
+export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, imageUrl, sizes, display, processor, ram, battery, cameras, frontalCamera, nfc }) => {
   const dispatch = useDispatch();
   const [color, setColor] = React.useState(0)
   const [choiceMemory, setChoiceMemory] = React.useState(1)
@@ -65,7 +63,7 @@ export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, image
           <p>Цвет: {colorType[color]}</p>
           <div className="color">
             {ColorKinds.map((items, i) => <li key={i} onClick={() => clickColor(i)} className={`${items} ${color === i ? `active` : `""`}`}></li>)}
-          </div>  
+          </div>
           <div className={s.productProperty} >
             <li className={s.productPropertyList}>
               <ul>экран</ul>

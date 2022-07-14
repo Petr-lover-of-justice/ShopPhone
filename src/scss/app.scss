@@ -8,6 +8,9 @@ body {
 }
 
 .wrapper {
+
+
+
   width: calc(100vw - 100px);
   height: 100%;
   background-color: #fff;
@@ -28,6 +31,8 @@ body {
 }
 
 .content {
+ 
+
   &__top {
     display: flex;
     align-items: center;
@@ -488,5 +493,8 @@ body {
   .active {
     border: 1px solid rgb(105, 0, 17);
   }
+}
+.footer{
+
 }
 
