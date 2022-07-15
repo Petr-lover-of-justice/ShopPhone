@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/ShopPhone/static/css/main.a44851bc.css",
-    "main.js": "/ShopPhone/static/js/main.34d44522.js",
-    "Cart.js": "/ShopPhone/static/js/Cart.f5622e93.chunk.js",
+    "main.css": "/ShopPhone/static/css/main.3138be12.css",
+    "main.js": "/ShopPhone/static/js/main.272653fc.js",
+    "Cart.js": "/ShopPhone/static/js/Cart.ad8475fa.chunk.js",
     "FullPhone.css": "/ShopPhone/static/css/FullPhone.81a4077e.chunk.css",
-    "FullPhone.js": "/ShopPhone/static/js/FullPhone.1db60456.chunk.js",
+    "FullPhone.js": "/ShopPhone/static/js/FullPhone.170dd05f.chunk.js",
     "NotFound.js": "/ShopPhone/static/js/NotFound.ba3b7c89.chunk.js",
     "static/media/instagram.png": "/ShopPhone/static/media/instagram.e719d8b29f452a16302d.png",
     "static/media/telegram.png": "/ShopPhone/static/media/telegram.e9722f26cc228e817986.png",
     "static/media/twitter (1).png": "/ShopPhone/static/media/twitter (1).894988327f8d68209e91.png",
     "static/media/share1.png": "/ShopPhone/static/media/share1.4ce1179c5a22bc38b677.png",
     "index.html": "/ShopPhone/index.html",
-    "main.a44851bc.css.map": "/ShopPhone/static/css/main.a44851bc.css.map",
-    "main.34d44522.js.map": "/ShopPhone/static/js/main.34d44522.js.map",
-    "Cart.f5622e93.chunk.js.map": "/ShopPhone/static/js/Cart.f5622e93.chunk.js.map",
+    "main.3138be12.css.map": "/ShopPhone/static/css/main.3138be12.css.map",
+    "main.272653fc.js.map": "/ShopPhone/static/js/main.272653fc.js.map",
+    "Cart.ad8475fa.chunk.js.map": "/ShopPhone/static/js/Cart.ad8475fa.chunk.js.map",
     "FullPhone.81a4077e.chunk.css.map": "/ShopPhone/static/css/FullPhone.81a4077e.chunk.css.map",
-    "FullPhone.1db60456.chunk.js.map": "/ShopPhone/static/js/FullPhone.1db60456.chunk.js.map",
+    "FullPhone.170dd05f.chunk.js.map": "/ShopPhone/static/js/FullPhone.170dd05f.chunk.js.map",
     "NotFound.ba3b7c89.chunk.js.map": "/ShopPhone/static/js/NotFound.ba3b7c89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a44851bc.css",
-    "static/js/main.34d44522.js"
+    "static/css/main.3138be12.css",
+    "static/js/main.272653fc.js"
   ]
 }
