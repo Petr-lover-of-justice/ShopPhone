@@ -97,7 +97,7 @@ export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, image
         </div>
       </div>
       <div className={s.navigateBtn}>
-        <Link to="/">
+        <Link to="/ShopPhone/">
           <button className={s.navigateBtnBack}>
             <span>Назад</span>
           </button>

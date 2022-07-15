@@ -8,16 +8,10 @@ body {
 }
 
 .wrapper {
-
-
-
-  width: calc(100vw - 100px);
+  display: flex;
+  flex-direction: column;
   height: 100%;
   background-color: #fff;
-  margin: 50px auto;
-  border-radius: 10px;
-  max-width: 1400px;
-
   @media (max-width: 645px) {
     width: calc(100vw - 30px);
     margin-top: 15px;
@@ -31,8 +25,8 @@ body {
 }
 
 .content {
- 
-
+  flex: 1 0 auto;
+  min-height: 720px;
   &__top {
     display: flex;
     align-items: center;
@@ -110,9 +104,7 @@ body {
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 40px;
     margin-top: 28px;
-    max-width: 800px;
-
- 
+    width:800px;
 
     @media (max-width: 1300px) {
    
@@ -130,11 +122,6 @@ body {
 
 .container {
   width: $container-width;
-  // margin: 0 auto;
-  // @media (max-width: 1060px) {
-  //   margin: 0px;
-  //   padding: 0px;
-  // }
 
   &__carousels {
     @media (max-width: 1060px) {
@@ -318,6 +305,7 @@ body {
         height: 45px;
         background-color: rgb(206, 206, 206);
         border-radius: 10px;
+        margin-left: 50px;
         &-minus {
           svg {
             path:first-of-type {
@@ -495,6 +483,8 @@ body {
   }
 }
 .footer{
-
+  flex: 0 0 auto;
+  margin: 0px;
+  padding: 0px;
 }
 

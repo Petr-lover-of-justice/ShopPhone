@@ -13,7 +13,7 @@ import arrow from '..//../assets/img/share1.png';
 const aboutWe = ["О НАС", "Xiaomi", "Команда лидеров", "Политика Конфиденциальности", "Добросовестность и соблюдение требований"];
 const products = ["ПРОДУКЦИЯ", "Xiaomi 12X", "Xiaomi 11T", "Redmi Note 11", "Код купона"];
 const support = ["СВЯЗАТЬСЯ С НАМИ", "Онлайн поддержка", "Эл. почта", "Горячая линия : 88007756615", "Часы работы с 9:00 до 20:00 МСК, Пн. – Пт"];
-const link = ["/ShopPhone/", "/ShopPhone/", "/ShopPhone/", "/ShopPhone/", "/ShopPhone/"];
+
 interface IShippingFields {
     email: string
     name: string
@@ -22,7 +22,6 @@ export const Footer = () => {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm<IShippingFields>()
     const onSubmit: SubmitHandler<IShippingFields> = data => {
-      
         (async () => {
             try {
                 await axios({
@@ -38,10 +37,10 @@ export const Footer = () => {
         alert("ваша почта пришла нам на сервер)")
     }
 
-    let linlus = link.map((item, i) => (item))
-    let aboutUs = aboutWe.map((item, i) => (<ul key={item}><Link className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
-    let productsUs = products.map((item, i) => (<ul><Link key={item} className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
-    let supportUs = support.map((item, i) => (<ul><Link key={item} className={i === 0 ? s.title : s.text} to={`${linlus[i]}`}>{item}</Link></ul>))
+ 
+    let aboutUs = aboutWe.map((item, i) => (<ul key={item}><Link className={i === 0 ? s.title : s.text} to="/ShopPhone/">{item}</Link></ul>))
+    let productsUs = products.map((item, i) => (<ul key={item}><Link className={i === 0 ? s.title : s.text} to="/ShopPhone/">{item}</Link></ul>))
+    let supportUs = support.map((item, i) => (<ul key={item}><Link className={i === 0 ? s.title : s.text} to="/ShopPhone/">{item}</Link></ul>))
     return (
         <div className={s.root}>
             <li>
