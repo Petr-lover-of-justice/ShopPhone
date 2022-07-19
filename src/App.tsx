@@ -6,6 +6,7 @@ import Home from './pages/Home';
 
 import './scss/app.scss';
 import MainLayout from './layouts/MainLayout';
+import { Registration } from './pages/Registration';
 
 const Cart = Loadable({
   loader: () => import(/* webpackChunkName: "Cart" */ './pages/Cart'),
@@ -41,6 +42,14 @@ function App() {
           element={
             <Suspense fallback={<div>Идёт загрузка...</div>}>
               <NotFound />
+            </Suspense>
+          }
+        />
+          <Route
+          path="/enter"
+          element={
+            <Suspense fallback={<div>Идёт загрузка...</div>}>
+              <Registration />
             </Suspense>
           }
         />

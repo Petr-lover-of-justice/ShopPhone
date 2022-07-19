@@ -482,6 +482,20 @@ body {
     border: 1px solid rgb(105, 0, 17);
   }
 }
+.registration{
+  display: grid;
+  grid-template-columns: 1fr 2fr ;
+  max-width: 1600px;
+  &__imgLogo img{
+  max-width:500px;
+  }
+  &__enter {
+    display:flex;
+    justify-content:center;
+    max-width: 100%;
+  }
+}
+
 .footer{
   flex: 0 0 auto;
   margin: 0px;
