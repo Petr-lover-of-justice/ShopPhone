@@ -11,10 +11,10 @@ export const Registration = () => {
     <input type="text" className={s.inputs__Text} value={email} onChange={(event) => setEmail(event.target.value)} />
     <span className={s.inputs__label}>Email / Номер телефона / Mi Aккаунт</span>
 </div>
-<div className={s.inputs} >
+{/* <div className={s.inputs} >
 <input type="password" className={s.inputs__Text} value={password} onChange={(event) => setPassword(event.target.value)} />
     <span className={s.inputs__label}>Пароль</span>
-    </div>
+    </div> */}
 <div className={s.root__btn}>
     <button>вход</button>
 </div>
