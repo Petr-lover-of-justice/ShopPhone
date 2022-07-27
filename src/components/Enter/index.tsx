@@ -6,13 +6,15 @@ import s from "./Enter.module.scss"
 import vk from "..//../assets/img/vk.png"
 import google from "..//../assets/img/google.png"
 
-type propsData={
-    name:string,
-    type:string,
-    check:any
-}
-export const Enter: React.FC<propsData>= ({name,type,check}) => {
 
+
+type propsData={
+    name?:string,
+    type?:string,
+   
+}
+export const Enter: React.FC<propsData>= ({name,type,}) => {
+    console.log(name,type,)
     interface IShippingFields {
         name: string
         password: string
@@ -51,7 +53,7 @@ export const Enter: React.FC<propsData>= ({name,type,check}) => {
                 {errors?.name && (<div style={{ color: 'red' }}>{errors.name.message}</div>)}
 
 
-                {/* <div className={s.inputs}>
+                <div className={s.inputs}>
                     <input type="password" className={s.inputs__Text} 
                         {...register('password', {
                             required: 'password is require field!',
@@ -63,7 +65,7 @@ export const Enter: React.FC<propsData>= ({name,type,check}) => {
                         })} />
                     <span className={s.inputs__label}>Пароль</span>
                 </div>
-                {errors?.password && (<div style={{ color: 'red' }}>{errors.password.message}</div>)} */}
+                {errors?.password && (<div style={{ color: 'red' }}>{errors.password.message}</div>)}
                 
                 <div className={s.root__btn}>
                     <button>вход</button>
