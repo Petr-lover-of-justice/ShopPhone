@@ -1,6 +1,4 @@
 import React from 'react'
-import s from "./navbar.module.scss"
-
 
 export const Navbar = () => {
     const [btn, setBtn] = React.useState("list-container")

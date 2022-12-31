@@ -8,10 +8,6 @@ import s from "./Header.module.scss"
 import { Navbar } from '../Navbar';
 
 export const Header: React.FC = () => {
-    // document.querySelector('.more-button').addEventListener('click', function () {
-    //     document.querySelector('.list-container').classList.toggle('active');
-    // });
-
     const { items, totalPrice } = useSelector(selectCart);
     const location = useLocation();
     const isMounted = React.useRef(false);
@@ -81,7 +77,8 @@ export const Header: React.FC = () => {
             </div>
             <div style={{
                 display: "flex",
-                justifyContent: "space-around"
+                justifyContent: "space-around",
+                marginTop:"20px",
             }}>
                 <div className={s.header__enter}>
                     <Link to="/enter">
