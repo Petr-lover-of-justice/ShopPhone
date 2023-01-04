@@ -18,7 +18,7 @@ export const Login = () => {
             <div className={s.root__title}>
                 {entry}
             </div>
-        {actives===0? <Enter />:<Registration />}
+        {actives===0?<Enter />:<Registration />}
         </div>
     )
 }

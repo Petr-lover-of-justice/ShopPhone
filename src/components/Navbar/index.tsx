@@ -45,9 +45,9 @@ export const Navbar = () => {
                 </a>
             </div>
             <div className="menu">
-                <a href="#"><span>Главная</span></a>
+                <a href="/ShopPhone/"><span>Главная</span></a>
                 <a href="https://github.com/Petr-lover-of-justice/ShopPhone"><span>Код проекта</span></a>
-                <a href="#"><span>Корзина</span></a>
+                <a href="/cart"><span>Корзина</span></a>
                 <a href="#"><span>Просто</span></a>
             </div>
         </nav>
