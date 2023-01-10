@@ -53,14 +53,17 @@ export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, image
     dispatch(addItem(item));
   }
   return (
-    <div >
+    <>
       <div className={s.product}>
-        <img className={s.productPhoto} src={imageUrl} />
+        {/* <img className={s.productPhoto} src={imageUrl} /> */}
         <div className={s.productSpecifications}>
-          <h2>{title}</h2>
-          <h4>{price} ₽</h4>
+        <img className={s.productPhoto} src={imageUrl} />
+          <h2 style={{ gridArea:"title"}}>{title}</h2>
+          <h4 style={{ gridArea:"price"}}>{price} ₽</h4>
           <li className={s.productMemeres}>{typeNames.map((items, i) => <li key={items} className={`${choiceMemory === i ? s.active : ""}`} onClick={() => setChoiceMemory(i)}>{items}</li>)}</li>
+          <div style={{ gridArea:"colorProperty"}}>
           <p>Цвет: {colorType[color]}</p>
+          </div>  
           <div className="color">
             {ColorKinds.map((items, i) => <li key={i} onClick={() => clickColor(i)} className={`${items} ${color === i ? `active` : `""`}`}></li>)}
           </div>
@@ -108,6 +111,6 @@ export const FullProperty: React.FC<fullPhoneProps> = ({ id, title, price, image
           </button>
         </Link>
       </div>
-    </div>
+    </>
   )
 }

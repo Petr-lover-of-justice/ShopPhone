@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 .phone-block {
   width: 280px;
@@ -12,10 +12,10 @@
 
   &-wrapper {
     display: flex;
-    justify-content:space-between;
-    @media(max-width:800px) {
+    justify-content: space-between;
+    @media (max-width: 800px) {
       display: grid;
-      justify-content:center;
+      justify-content: center;
     }
   }
 
@@ -30,33 +30,24 @@
     margin-bottom: 20px;
   }
 
-
-  &__black{
-    background-color:black;
-    // border:1px solid rgb(233, 140, 140);    
-    height:10px;
-    width:auto;
-    border-radius:45px;
+  &__black {
+    background-color: black;
+    height: 10px;
+    width: auto;
+    border-radius: 45px;
   }
-  &__while{
-    background-color:rgb(192, 192, 192);
-    // border:1px solid rgb(233, 140, 140);    
-    height:10px;
-    width:auto;
-    border-radius:45px;
+  &__while {
+    background-color: rgb(192, 192, 192);
+    height: 10px;
+    width: auto;
+    border-radius: 45px;
   }
-  &__coral{
-    background-color:#ff7f50;
-    // border:1px solid rgb(233, 140, 140);    
-    height:10px;
-    width:auto;
-    border-radius:45px;
- 
- 
+  &__coral {
+    background-color: #ff7f50;
+    height: 10px;
+    width: auto;
+    border-radius: 45px;
   }
-
-
-
 
   &__selector {
     display: flex;
@@ -64,14 +55,10 @@
     border-radius: 10px;
     flex-direction: column;
     padding: 6px 6px 6px 0px;
-  
+
     ul {
       display: flex;
       flex: 1;
-
-      &:first-of-type {
-        // margin-bottom: 6px;
-      }
 
       li {
         padding: 8px;

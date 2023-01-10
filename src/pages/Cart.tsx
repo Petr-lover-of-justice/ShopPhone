@@ -104,12 +104,12 @@ const Cart: React.FC = () => {
           <div className="cart__bottom">
             <div className="cart__bottom-details">
               <p> В корзине <b>{totalCount} товаров.</b> </p>
-            <p> На сумму: <b>{totalPrice}₽</b>{' '}</p>
-            <div className="button pay-btn">
-              <span>Перейти к оформлению</span>
+              <p> На сумму: <b>{totalPrice}₽</b>{' '}</p>
+              <div className="button pay-btn">
+                <span>Перейти к оформлению</span>
+              </div>
             </div>
-            </div>
-            
+
           </div>
         </div>
       </div>

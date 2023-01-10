@@ -9,12 +9,12 @@ import MainLayout from './layouts/MainLayout';
 import { Registration } from './pages/Registration';
 
 const Cart = Loadable({
-  loader: () => import(/* webpackChunkName: "Cart" */ './pages/Cart'),
+  loader: () => import('./pages/Cart'),
   loading: () => <div>Идёт загрузка корзины...</div>,
 });
 
-const FullPhone = React.lazy(() => import(/* webpackChunkName: "FullPhone" */ './pages/FullPhone'));
-const NotFound = React.lazy(() => import(/* webpackChunkName: "NotFound" */ './pages/NotFound'));
+const FullPhone = React.lazy(() => import('./pages/FullPhone'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (

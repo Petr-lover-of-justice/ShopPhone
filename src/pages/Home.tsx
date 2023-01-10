@@ -52,8 +52,8 @@ const Home: React.FC = () => {
 
   return (
     <div className="container">
-      <div className = "container__carousels">
-      <Carousels />
+      <div className="container__carousels">
+        <Carousels />
       </div>
       <div className="content__top">
         <Sort value={sort} />
