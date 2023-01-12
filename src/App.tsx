@@ -20,7 +20,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
-        <Route path="/ShopPhone/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route
           path="cart"
           element={
